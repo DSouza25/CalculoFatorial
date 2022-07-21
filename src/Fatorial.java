@@ -99,11 +99,17 @@ public class Fatorial extends javax.swing.JFrame {
         // TODO add your handling code here:
         int valor = Integer.parseInt(jsNumero.getValue().toString());
         int resultado = 1;
-        while (valor > 0){
-            resultado = resultado * valor;
-            valor--;
+        if (valor >0){
+            while (valor > 0){
+                resultado = resultado * valor;
+                valor--;
+            }
+             lblRes.setText(Integer.toString(resultado));
+        }else{
+            lblRes.setText("Não existe fatorial pra número negativo.");
         }
-        lblRes.setText(Integer.toString(resultado));
+            
+       
     }//GEN-LAST:event_jsNumeroStateChanged
 
     /**
